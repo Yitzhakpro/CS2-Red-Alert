@@ -25,7 +25,9 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Zip Build
-        run: zip -r RedAlertPlugin.zip ./bin/Release/RedAlertPlugin
+        run: |
+          cd ./bin/Release
+          zip -r ../../RedAlertPlugin.zip RedAlertPlugin
 
       - name: Create Release
         id: create_release
