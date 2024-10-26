@@ -24,12 +24,16 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
 
+      - name: Zip Build
+        run: zip -r RedAlertPlugin.zip ./bin/Release/RedAlertPlugin
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref }}
-          files: ./bin/Release/**
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          files: RedAlertPlugin.zip
           body: |
             ## Release Notes
             - Release for tag ${{ github.ref }}
