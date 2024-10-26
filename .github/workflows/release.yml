@@ -29,16 +29,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref }}
+          files: ./bin/Release/**
           body: |
             ## Release Notes
             - Release for tag ${{ github.ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload Release Assets
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.ref }}
-          files: ./bin/Release/**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
