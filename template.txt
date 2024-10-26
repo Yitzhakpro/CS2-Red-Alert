@@ -1,0 +1,3 @@
+﻿{RED}Red Alert: {TITLE}
+{DEFAULT}Description: {DESCRIPTION}
+{DEFAULT}Cities: {CITIES}
