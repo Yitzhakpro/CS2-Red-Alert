@@ -11,7 +11,7 @@ public class RedAlertPlugin : BasePlugin, IPluginConfig<Config.Config>
 {
     public override string ModuleName => "Red Alert Plugin";
 
-    public override string ModuleVersion => "0.0.1";
+    public override string ModuleVersion => "1.0.0";
 
     public Config.Config Config { get; set; }
 
