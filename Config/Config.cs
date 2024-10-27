@@ -8,13 +8,15 @@ public class Config : BasePluginConfig
 {
     [JsonPropertyName("debug")] public bool Debug { get; set; } = false;
 
+    [JsonPropertyName("fetchInterval")] public float FetchInterval { get; set; } = 5f;
+
     [JsonPropertyName("getAlertsUrl")]
     public string GetAlertsUrl { get; set; } = "https://www.kore.co.il/redAlert.json";
 
     public void PrintConfig()
     {
         Logger.Logger.Instance.Info("Loaded config:");
-        
+
         var type = GetType();
         foreach (var prop in type.GetProperties(BindingFlags.Public | BindingFlags.Instance))
         {

@@ -29,7 +29,7 @@ public class RedAlertPlugin : BasePlugin, IPluginConfig<Config.Config>
 
         _redAlertClient = new RedAlertClient.RedAlertClient(Config.GetAlertsUrl);
 
-        AddTimer(5f, PeriodicallyFetchRedAlerts, CSTimer.TimerFlags.REPEAT);
+        AddTimer(Config.FetchInterval, PeriodicallyFetchRedAlerts, CSTimer.TimerFlags.REPEAT);
     }
 
     private void PeriodicallyFetchRedAlerts()
