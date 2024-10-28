@@ -17,16 +17,11 @@ A plugin for showing Red Alerts (Pikud-Haoref alerts) in the server chat.
 The config is initialized when the plugin is loaded for the first time. You can find the config file at
 `\game\csgo\addons\counterstrikesharp\configs\plugins\RedAlertPlugin\RedAlertPlugin.json`.
 
-```json5
-{
-  "debug": false,
-  // if true, more logs will be printed to the console
-  "fetchInterval": 5,
-  // amount of seconds between each alerts fetch
-  "getAlertsUrl": "https://www.kore.co.il/redAlert.json",
-  // 
-}
-```
+### Config options
+
+- **debug**: if true, more logs will be printed to the console (default: false)
+- **fetchInterval**: amount of seconds between each alerts fetch (default: 5)
+- **getAlertsUrl**: the URL to fetch the alerts from (default: "https://www.kore.co.il/redAlert.json")
 
 The plugin comes with a default template message that will be sent to the server chat when a new alert is fetched.<br/>
 You can customize the message by editing the `template.txt` file located in the plugin folder (
